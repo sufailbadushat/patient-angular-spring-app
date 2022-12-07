@@ -9,10 +9,10 @@ import { ApiService } from '../api.service';
 export class AddPatientComponent {
 
   patientName = ""
-  patinetId = ""
+  patientId = ""
   address = ""
   contactNumber = ""
-  dateOfAppintment = ""
+  dateOfAppoinmet = ""
   doctorName = ""
 
   constructor(private api: ApiService) { }
@@ -21,10 +21,10 @@ export class AddPatientComponent {
     let data: any =
     {
       "patientName": this.patientName,
-      "patinetId": this.patinetId,
+      "patientId": this.patientId,
       "address": this.address,
       "contactNumber": this.contactNumber,
-      "dateOfAppintment": this.dateOfAppintment,
+      "dateOfAppoinmet": this.dateOfAppoinmet,
       "doctorName": this.doctorName
     }
     console.log(data);
@@ -36,10 +36,10 @@ export class AddPatientComponent {
 
           alert("added successfully!");
           this.patientName = ""
-          this.patinetId = ""
+          this.patientId = ""
           this.address = ""
           this.contactNumber = ""
-          this.dateOfAppintment = ""
+          this.dateOfAppoinmet = ""
           this.doctorName = ""
 
         } else {
