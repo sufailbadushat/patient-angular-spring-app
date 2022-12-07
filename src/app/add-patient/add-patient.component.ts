@@ -29,7 +29,7 @@ export class AddPatientComponent {
     }
     console.log(data);
 
-    this.api.addPatient(data).subscribe(
+    this.api.addPatent(data).subscribe(
       (response: any) => {
         console.log(response);
         if (response.status == "success") {
