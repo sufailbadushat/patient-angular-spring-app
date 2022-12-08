@@ -1,0 +1,55 @@
+<app-nav-bar></app-nav-bar>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-sm-12 div-md-12 col-lg-12 div-xl-12 div-xxl-12">
+            <div class="row g-3 mt-4">
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-lg-12 col-xl-12 col-xxl-12 text-center">
+                    <h1 class="text-dark">Search Patient</h1>
+                </div>
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <label for="" class="form-label ">Patient Id</label>
+                    <input name="patientId" [(ngModel)]="patientId" type="text" placeholder="Type employee code"
+                        class="form-control">
+                </div>
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-lg-12 col-xl-12 col-xxl-12 text-center">
+                    <button (click)="readValue()" class="btn btn-secondary">Search</button>
+                </div>
+            </div>
+
+            <table class="table mt-5">
+                <thead>
+                    <tr>
+
+                        <th scope="col">Patient Name</th>
+                        <th scope="col">Patient Id</th>
+                        <th scope="col">Address</th>
+                        <th scope="col">Contact Number</th>
+                        <th scope="col">Date of appoinment</th>
+                        <th scope="col">Doctor Name</th>
+
+
+
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <tr *ngFor="let i of searchValue">
+
+                        <td>{{i.patientName}}</td>
+                        <td>{{i.patientId}}</td>
+                        <td>{{i.address}}</td>
+                        <td>{{i.contactNumber}}</td>
+                        <td>{{i.dateOfAppoinmet}}</td>
+                        <td>{{i.doctorName}}</td>
+
+                    </tr>
+
+                </tbody>
+            </table>
+
+
+        </div>
+    </div>
+</div>

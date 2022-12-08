@@ -6,14 +6,18 @@ import { Injectable } from '@angular/core';
 })
 export class ApiService {
 
-  constructor(private http:HttpClient) { }
+  constructor(private http: HttpClient) { }
 
-  fetchPatient=()=>{
-   return this.http.get("http://localhost:8080/view");
+  fetchPatient = () => {
+    return this.http.get("http://localhost:8080/view");
   }
 
-  addPatent = (dataToSend:any) => {
-    return this.http.post("http://localhost:8080/add",dataToSend);
+  addPatent = (dataToSend: any) => {
+    return this.http.post("http://localhost:8080/add", dataToSend);
+  }
+
+  searchPatient = (dataToRead:any) => {
+    return this.http.post("http://localhost:8080/search",dataToRead);
   }
 
 }

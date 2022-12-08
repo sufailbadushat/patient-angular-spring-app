@@ -9,6 +9,7 @@ import { ViewPatientComponent } from './view-patient/view-patient.component';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { SearchPatientComponent } from './search-patient/search-patient.component';
 
 let myRoute:Routes = 
 [
@@ -23,6 +24,10 @@ let myRoute:Routes =
   {
     path:"view",
     component:ViewPatientComponent
+  },
+  {
+    path:"search",
+    component:SearchPatientComponent
   }
 ]
 
@@ -31,7 +36,8 @@ let myRoute:Routes =
     AppComponent,
     NavBarComponent,
     AddPatientComponent,
-    ViewPatientComponent
+    ViewPatientComponent,
+    SearchPatientComponent
   ],
   imports: [
     BrowserModule,
